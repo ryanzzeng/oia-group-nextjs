@@ -1,17 +1,57 @@
+import Image from "next/image";
 import Link from "next/link";
+import { BrandedFooter, ImageHero, PillLink } from "./components/site";
 
-const projects = [
-  { name: "43 Bridge Street", place: "Hurstville", tone: "warm" },
-  { name: "Australian Projects", place: "Sydney", tone: "stone" },
-  { name: "View Point", place: "Hurstville", tone: "blue" },
+const figures = [
+  ["8,549.7", "Revenue (AUD)"],
+  ["61.8", "Profit 2025 (AUD)"],
+  ["47.6", "Profit attributable"],
+  ["10,714.8", "Total assets"],
+];
+
+const news = [
+  { title: "Beijing Jinxi Centennial Architectural Design Co., Ltd", date: "October 9, 2025", image: "/figma/intro.png", featured: true },
+  { title: "JinXi DongHuWan Project", date: "October 9, 2025", image: "/figma/project-detail.png" },
+  { title: "Beijing Jinxi Green Building Technology Industry Group Co., Ltd", date: "October 11, 2025", image: "/figma/projects-page/raw-3.png" },
 ];
 
 export default function Home() {
-  return <>
-    <section className="hero"><div className="hero-image warm"></div><div className="hero-copy"><p className="eyebrow">Property · Place · People</p><h1>Tomorrow,<br/>considered today.</h1><Link className="arrow-link" href="/projects">Explore our projects <span>↗</span></Link></div></section>
-    <section className="intro grid"><p className="eyebrow">OIA Group</p><div><h2>We shape enduring places through a thoughtful approach to property.</h2><p>Our work brings together design, community and long-term value to create places that belong.</p></div></section>
-    <section className="stats">{[["85,497","SQM delivered"],["618","Residences"],["476","In pipeline"],["10,748","Lives impacted"]].map(([n,l])=><div key={l}><strong>{n}</strong><span>{l}</span></div>)}</section>
-    <section className="section"><div className="section-heading"><p className="eyebrow">Selected work</p><h2>Our projects</h2><Link className="arrow-link" href="/projects">View all <span>↗</span></Link></div><div className="cards">{projects.map(p=><article className="project-card" key={p.name}><div className={`card-image ${p.tone}`}></div><p>{p.place}</p><h3>{p.name}</h3></article>)}</div></section>
-    <section className="statement"><p className="eyebrow">Our perspective</p><blockquote>“A good development doesn’t simply occupy a place. It adds something lasting to it.”</blockquote></section>
-  </>;
+  return <div className="oia-home">
+    <ImageHero className="oia-hero" image="/figma/viewall-projects/hero.png" alt="OIA residential development on a landscaped city street" title={<>Your home,<br />our priority</>} />
+
+    <section className="oia-intro">
+      <div className="intro-visual"><Image src="/figma/intro.png" alt="Contemporary blue glass architecture" fill sizes="45vw" /></div>
+      <div className="intro-copy">
+        <h2>OIA Group</h2>
+        <p><b>Introduction</b> Established in 2016, China Oriental Investment is a wholly-owned subsidiary of China Oriental Group Co Ltd (0581.HK) in Australia. As a crucial overseas business branch of the group, the company specialises in real estate investment.</p>
+        <p>The company identifies and develops promising residential, commercial and land projects. Its portfolio includes IQ Burwood, Lighthouse Burwood, View Point Hurstville, Ridge Park Estate and Denman Park Estate.</p>
+        <PillLink href="/about-us">About us</PillLink>
+      </div>
+    </section>
+
+    <section className="finance">
+      <h2>Our financial profile</h2>
+      <div className="figure-grid">{figures.map(([value, label]) => <article key={label}><p>{label}</p><strong>{value}</strong><span>Million</span></article>)}</div>
+    </section>
+
+    <section className="projects-showcase">
+      <Image src="/figma/projects.png" alt="Warm, contemporary apartment interior" fill sizes="100vw" />
+      <div className="projects-shade" />
+      <h2>Our projects</h2>
+    </section>
+
+    <section className="project-story">
+      <div className="project-story-image"><Image src="/figma/project-detail.png" alt="Refined residential lobby" fill sizes="48vw" /></div>
+      <div><p>OIA Group is a property development and investment company focused on creating modern, high-quality residential spaces across Australia.</p><p>With an emphasis on smart living, sustainable construction, strategic locations and human-centred design, our developments combine lifestyle convenience, long-term value and refined contemporary living.</p><PillLink href="/projects">View our projects</PillLink></div>
+    </section>
+
+    <aside className="partners">OIA Group has built strong partnerships with a wide network of reputable collaborators, including leading architects, contractors and service providers.</aside>
+
+    <section className="featured-news">
+      <h2>Featured news</h2>
+      <div className="news-mosaic">{news.map((item) => <Link href="/news/oia-group-designing-for-the-future" key={item.title}><article className={item.featured ? "featured" : ""}><div className="news-photo"><Image src={item.image} alt="" fill sizes={item.featured ? "38vw" : "30vw"} /></div><div className="news-overlay"><h3>{item.title}</h3><time>{item.date}</time></div></article></Link>)}</div>
+      <PillLink href="/news">View all news</PillLink>
+    </section>
+    <BrandedFooter />
+  </div>;
 }
