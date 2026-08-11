@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "About Us" };
 
 export default function About() {
   return <div className="about-figma">
-    <ImageHero className="about-hero" image="/figma/projects-page/raw-3.png" alt="OIA residential towers overlooking Sydney" title="About us" />
+    <ImageHero className="about-hero" image="/figma/about/hero.png" alt="OIA residential tower overlooking Sydney" title="About us" />
 
     <section className="about-introduction">
       <h2><span>OIA Group</span><br />introducing a new way to showcase properties</h2>
@@ -18,7 +18,7 @@ export default function About() {
     </section>
 
     <section className="about-project-image">
-      <Image src="/figma/project-detail.png" alt="Bright, refined apartment interior" fill sizes="88vw" />
+      <Image src="/figma/about/project-banner.png" alt="Bright, refined apartment interior" fill sizes="88vw" />
     </section>
 
     <section className="about-projects-link">
