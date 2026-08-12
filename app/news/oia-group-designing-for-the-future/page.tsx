@@ -5,6 +5,7 @@ import { BrandedFooter, PillLink } from "../../components/site";
 export const metadata: Metadata = {
   title: "Beijing Jinxi Centennial Architectural Design",
   description: "Beijing Jinxi Centennial Architectural Design and its development history.",
+  alternates: { canonical: "/news-single-page/" },
 };
 
 const history = [

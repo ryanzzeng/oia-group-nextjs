@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { BrandedFooter, ImageHero, PillLink } from "../components/site";
 
-export const metadata: Metadata = { title: "About Us" };
+export const metadata: Metadata = { title: "About Us", description: "Learn about OIA Group’s residential property development portfolio, design approach and investment experience in Australia.", alternates: { canonical: "/about-us/" } };
 
 export default function About() {
   return <div className="about-figma">
@@ -27,7 +27,7 @@ export default function About() {
     </section>
 
     <section className="about-values">
-      <Image src="/figma/about/values.png" alt="OIA architecture, interiors and residential design" fill sizes="88vw" />
+      <Image src="/figma/about/values.webp" alt="OIA architecture, interiors and residential design" fill sizes="88vw" />
       <div className="about-value-shades"><i /><i /><i /></div>
       <div className="about-value-labels"><h2>Smart living</h2><h2>Eco construction</h2><h2>Awarded design</h2></div>
     </section>

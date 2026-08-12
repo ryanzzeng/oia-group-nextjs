@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { BrandedFooter, ImageHero, PillLink } from "../components/site";
 
-export const metadata: Metadata = { title: "News" };
+export const metadata: Metadata = { title: "News", description: "Read company updates, project milestones and development news from OIA Group.", alternates: { canonical: "/news/" } };
 
 const articleHref = "/news-single-page";
 
@@ -17,6 +18,7 @@ export default function News() {
 
     <main className="figma-news-content" id="news-list">
       <article className="figma-news-story figma-news-story-first">
+        <Link className="card-hit-area" href={articleHref} aria-label="Read Beijing Jinxi Centennial Architectural Design" />
         <div className="figma-news-copy">
           <span>News</span>
           <h2>Beijing Jinxi Centennial Architectural Design</h2>
@@ -30,6 +32,7 @@ export default function News() {
       </article>
 
       <article className="figma-news-story figma-news-story-featured">
+        <Link className="card-hit-area" href={articleHref} aria-label="Read Beijing Jinxi Green Building Technology Industry Group" />
         <div className="figma-news-copy">
           <span>News</span>
           <h2>Beijing Jinxi Green Building Technology Industry Group</h2>
