@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { BrandedFooter, ImageHero, PillLink } from "./components/site";
+import { FeaturedNewsCarousel } from "./components/featured-news-carousel";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
 
@@ -10,12 +10,6 @@ const figures = [
   ["61.8", "Profit 2025 (AUD)"],
   ["47.6", "Profit attributable"],
   ["10,714.8", "Total assets"],
-];
-
-const news = [
-  { title: "Beijing Jinxi Centennial Architectural Design Co., Ltd", date: "October 9, 2025", image: "/figma/intro.png", featured: true },
-  { title: "JinXi DongHuWan Project", date: "October 9, 2025", image: "/figma/project-detail.webp" },
-  { title: "Beijing Jinxi Green Building Technology Industry Group Co., Ltd", date: "October 11, 2025", image: "/figma/projects-page/raw-3.webp" },
 ];
 
 export default function Home() {
@@ -50,11 +44,7 @@ export default function Home() {
 
     <aside className="partners">OIA Group has built strong partnerships with a wide network of reputable collaborators, including leading architects, contractors and service providers.</aside>
 
-    <section className="featured-news">
-      <h2>Featured news</h2>
-      <div className="news-mosaic">{news.map((item) => <Link href="/news/oia-group-designing-for-the-future" key={item.title}><article className={item.featured ? "featured" : ""}><div className="news-photo"><Image src={item.image} alt="" fill sizes={item.featured ? "38vw" : "30vw"} /></div><div className="news-overlay"><h3>{item.title}</h3><time>{item.date}</time></div></article></Link>)}</div>
-      <PillLink href="/news">View all news</PillLink>
-    </section>
+    <FeaturedNewsCarousel />
     <BrandedFooter />
   </div>;
 }
