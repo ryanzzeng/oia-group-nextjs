@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { SiteHeader } from "./components/site";
+import { MotionEnhancements } from "./components/motion-enhancements";
 
 export const metadata: Metadata = {
   title: { default: "OIA Group", template: "%s | OIA Group" },
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en"><body>
     <SiteHeader />
+    <MotionEnhancements />
     <main>{children}</main>
   </body></html>;
 }

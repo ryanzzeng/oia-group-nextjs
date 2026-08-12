@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+export { SiteHeader } from "./site-header";
 
 const navigation = [
   ["Home", "/"],
@@ -7,17 +8,6 @@ const navigation = [
   ["Residential Projects", "/projects"],
   ["News", "/news"],
 ] as const;
-
-export function SiteHeader() {
-  return <header className="site-header">
-    <Link className="header-logo" href="/" aria-label="OIA Group home"><Image src="/figma/projects-page/raw-12.png" alt="" width={87} height={87} priority /></Link>
-    <nav aria-label="Primary navigation">{navigation.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</nav>
-    <details className="mobile-nav">
-      <summary aria-label="Open navigation"><span /><span /></summary>
-      <nav aria-label="Mobile navigation">{navigation.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</nav>
-    </details>
-  </header>;
-}
 
 export function ImageHero({ className, image, alt, title }: { className: string; image: string; alt: string; title: React.ReactNode }) {
   return <section className={className}>

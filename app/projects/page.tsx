@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { BrandedFooter, ImageHero, PillLink } from "../components/site";
 
 export const metadata: Metadata = { title: "Projects" };
@@ -34,13 +35,13 @@ export default function Projects() {
     </section>
 
     <section className="featured-projects">
-      <div className="featured-tall">
+      <Link className="featured-tall interactive-image" href="/viewall-projects" aria-label="View featured projects">
         <Image src="/figma/projects-page/raw-9.png" alt="Landscaped mixed-use residential development" fill sizes="48vw" />
         <h2>Featured<br />projects</h2>
-      </div>
+      </Link>
       <div className="featured-stack">
-        <div><Image src="/figma/projects-page/raw-7.png" alt="Residential townhouse development" fill sizes="48vw" /></div>
-        <div><Image src="/figma/projects-page/raw-3.png" alt="Modern residential towers" fill sizes="48vw" /></div>
+        <Link className="interactive-image" href="/viewall-projects" aria-label="View residential townhouse project"><Image src="/figma/projects-page/raw-7.png" alt="Residential townhouse development" fill sizes="48vw" /></Link>
+        <Link className="interactive-image" href="/viewall-projects" aria-label="View residential tower project"><Image src="/figma/projects-page/raw-3.png" alt="Modern residential towers" fill sizes="48vw" /></Link>
       </div>
     </section>
 

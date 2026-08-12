@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { BrandedFooter, ImageHero, PillLink } from "../components/site";
 
 export const metadata: Metadata = { title: "Project Showcase" };
@@ -75,6 +76,7 @@ export default function ViewAllProjects() {
 
     <section className="showcase-list">
       {projects.map((project) => <article className={`showcase-project image-${project.side}`} key={project.name}>
+        <Link className="card-hit-area" href="/projects" aria-label={`View ${project.name}`} />
         <div className="showcase-project-image"><Image src={project.image} alt={`${project.name} development`} fill sizes="55vw" /></div>
         <div className="showcase-project-copy">
           <span>Australian projects</span>
