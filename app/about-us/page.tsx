@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { BrandedFooter, ImageHero, PillLink } from "../components/site";
 
-export const metadata: Metadata = { title: "About Us" };
+export const metadata: Metadata = { title: "About Us", description: "Learn about OIA Group’s residential property development portfolio, design approach and investment experience in Australia.", alternates: { canonical: "/about-us/" } };
 
 export default function About() {
   return <div className="about-figma">

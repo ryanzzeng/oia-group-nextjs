@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { BrandedFooter, ImageHero, PillLink } from "../components/site";
+import { ProjectEnquiry } from "../components/project-enquiry";
 
-export const metadata: Metadata = { title: "Projects" };
+export const metadata: Metadata = { title: "Projects", description: "Explore OIA Group’s premium residential developments and approach to modern Australian living.", alternates: { canonical: "/projects/" } };
 
 const figures = [
   ["LAND", "412", "Sqm"],
@@ -54,6 +55,8 @@ export default function Projects() {
     <section className="projects-values">
       {values.map(([title, body], index) => <article key={title}><div><h2>{title}</h2><span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span></div><p>{body}</p></article>)}
     </section>
+
+    <ProjectEnquiry />
 
     <BrandedFooter />
   </div>;

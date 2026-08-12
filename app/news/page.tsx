@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BrandedFooter, ImageHero, PillLink } from "../components/site";
 
-export const metadata: Metadata = { title: "News" };
+export const metadata: Metadata = { title: "News", description: "Read company updates, project milestones and development news from OIA Group.", alternates: { canonical: "/news/" } };
 
 const articleHref = "/news-single-page";
 

@@ -1,6 +1,9 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { BrandedFooter, ImageHero, PillLink } from "./components/site";
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 const figures = [
   ["8,549.7", "Revenue (AUD)"],
