@@ -7,7 +7,6 @@ const navigation = [
   ["About Us", "/about-us"],
   ["Residential Projects", "/projects"],
   ["News", "/news"],
-  ["Contact", "/contact"],
 ] as const;
 
 export function ImageHero({ className, image, alt, title }: { className: string; image: string; alt: string; title: React.ReactNode }) {

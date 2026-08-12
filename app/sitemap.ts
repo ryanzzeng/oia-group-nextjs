@@ -11,6 +11,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/viewall-projects/", .9, "monthly"],
     ["/news/", .7, "weekly"],
     ["/news-single-page/", .6, "monthly"],
-    ["/contact/", .8, "yearly"],
   ].map(([path, priority, changeFrequency]) => ({ url: `${baseUrl}${path}`, priority: priority as number, changeFrequency: changeFrequency as "weekly" | "monthly" | "yearly" }));
 }
