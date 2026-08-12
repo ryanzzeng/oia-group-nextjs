@@ -14,13 +14,13 @@ const figures = [
 
 const news = [
   { title: "Beijing Jinxi Centennial Architectural Design Co., Ltd", date: "October 9, 2025", image: "/figma/intro.png", featured: true },
-  { title: "JinXi DongHuWan Project", date: "October 9, 2025", image: "/figma/project-detail.png" },
-  { title: "Beijing Jinxi Green Building Technology Industry Group Co., Ltd", date: "October 11, 2025", image: "/figma/projects-page/raw-3.png" },
+  { title: "JinXi DongHuWan Project", date: "October 9, 2025", image: "/figma/project-detail.webp" },
+  { title: "Beijing Jinxi Green Building Technology Industry Group Co., Ltd", date: "October 11, 2025", image: "/figma/projects-page/raw-3.webp" },
 ];
 
 export default function Home() {
   return <div className="oia-home">
-    <ImageHero className="oia-hero" image="/figma/viewall-projects/hero.png" alt="OIA residential development on a landscaped city street" title={<>Your home,<br />our priority</>} />
+    <ImageHero className="oia-hero" image="/figma/viewall-projects/hero.webp" alt="OIA residential development on a landscaped city street" title={<>Your home,<br />our priority</>} />
 
     <section className="oia-intro">
       <div className="intro-visual"><Image src="/figma/intro.png" alt="Contemporary blue glass architecture" fill sizes="45vw" /></div>
@@ -38,13 +38,13 @@ export default function Home() {
     </section>
 
     <section className="projects-showcase">
-      <Image src="/figma/projects.png" alt="Warm, contemporary apartment interior" fill sizes="100vw" />
+      <Image src="/figma/projects.webp" alt="Warm, contemporary apartment interior" fill sizes="100vw" />
       <div className="projects-shade" />
       <h2>Our projects</h2>
     </section>
 
     <section className="project-story">
-      <div className="project-story-image"><Image src="/figma/project-detail.png" alt="Refined residential lobby" fill sizes="48vw" /></div>
+      <div className="project-story-image"><Image src="/figma/project-detail.webp" alt="Refined residential lobby" fill sizes="48vw" /></div>
       <div><p>OIA Group is a property development and investment company focused on creating modern, high-quality residential spaces across Australia.</p><p>With an emphasis on smart living, sustainable construction, strategic locations and human-centred design, our developments combine lifestyle convenience, long-term value and refined contemporary living.</p><PillLink href="/projects">View our projects</PillLink></div>
     </section>
 

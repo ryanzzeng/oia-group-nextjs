@@ -24,7 +24,7 @@ const values = [
 
 export default function Projects() {
   return <div className="projects-figma">
-    <ImageHero className="projects-hero" image="/figma/projects-page/raw-6.png" alt="Contemporary OIA bedroom interior" title="Our projects" />
+    <ImageHero className="projects-hero" image="/figma/projects-page/projects-hero-enhanced.webp" alt="Contemporary OIA bedroom interior" title="Our projects" />
 
     <section className="projects-intro">
       <h2><span>OIA Group</span><br />introducing a new way to showcase properties</h2>
@@ -37,19 +37,19 @@ export default function Projects() {
 
     <section className="featured-projects">
       <Link className="featured-tall interactive-image" href="/viewall-projects" aria-label="View featured projects">
-        <Image src="/figma/projects-page/raw-9.png" alt="Landscaped mixed-use residential development" fill sizes="48vw" />
+        <Image src="/figma/projects-page/raw-9.webp" alt="Landscaped mixed-use residential development" fill sizes="48vw" />
         <h2>Featured<br />projects</h2>
       </Link>
       <div className="featured-stack">
         <Link className="interactive-image" href="/viewall-projects" aria-label="View residential townhouse project"><Image src="/figma/projects-page/raw-7.png" alt="Residential townhouse development" fill sizes="48vw" /></Link>
-        <Link className="interactive-image" href="/viewall-projects" aria-label="View residential tower project"><Image src="/figma/projects-page/raw-3.png" alt="Modern residential towers" fill sizes="48vw" /></Link>
+        <Link className="interactive-image" href="/viewall-projects" aria-label="View residential tower project"><Image src="/figma/projects-page/raw-3.webp" alt="Modern residential towers" fill sizes="48vw" /></Link>
       </div>
     </section>
 
     <PillLink className="projects-pill" href="/viewall-projects" arrow="→">View all projects</PillLink>
 
     <section className="projects-gallery" id="projects-gallery">
-      <Image src="/figma/projects.png" alt="Premium apartment living and dining room" fill sizes="94vw" />
+      <Image src="/figma/projects.webp" alt="Premium apartment living and dining room" fill sizes="94vw" />
     </section>
 
     <section className="projects-values">

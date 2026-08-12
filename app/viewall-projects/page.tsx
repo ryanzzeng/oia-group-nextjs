@@ -10,14 +10,14 @@ const projects = [
   {
     name: "Chatswood Help St",
     location: "3–5 Help St Chatswood",
-    image: "/figma/viewall-projects/chatswood.png",
+    image: "/figma/viewall-projects/chatswood.webp",
     side: "left",
     description: "The proposed high-rise project at 3–5 Help Street is located in the heart of Chatswood. Just steps from the transport hub and pedestrian precinct, it offers both vibrancy and tranquillity.",
   },
   {
     name: "Angophora",
     location: "Chatswood",
-    image: "/figma/viewall-projects/angophora.png",
+    image: "/figma/viewall-projects/angophora.webp",
     side: "right",
     description: "On the edge of Chatswood’s CBD, The Angophora brings together two residential towers above a shared podium. Retail, landscaped edges, communal gardens and terraces create a layered transition from city to home.",
   },
@@ -64,7 +64,7 @@ function ProjectLink() {
 
 export default function ViewAllProjects() {
   return <div className="showcase-page">
-    <ImageHero className="showcase-hero" image="/figma/viewall-projects/hero.png" alt="The Angophora mixed-use development in Chatswood" title="Project showcase" />
+    <ImageHero className="showcase-hero" image="/figma/viewall-projects/hero.webp" alt="The Angophora mixed-use development in Chatswood" title="Project showcase" />
 
     <section className="showcase-intro">
       <div><span>New development</span><h2>The Chatswood Collection</h2></div>
@@ -72,7 +72,7 @@ export default function ViewAllProjects() {
     </section>
 
     <section className="showcase-collection">
-      <Image src="/figma/viewall-projects/collection.png" alt="Refined bedroom in The Chatswood Collection" fill sizes="88vw" />
+      <Image src="/figma/viewall-projects/collection.webp" alt="Refined bedroom in The Chatswood Collection" fill sizes="88vw" />
     </section>
 
     <section className="showcase-list">

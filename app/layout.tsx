@@ -15,9 +15,9 @@ export const metadata: Metadata = {
     title: "OIA Group — Premium Residential Developments",
     description: "Thoughtfully designed residential developments created for modern Australian living.",
     url: "/",
-    images: [{ url: "/figma/viewall-projects/hero.png", width: 2896, height: 1944, alt: "OIA Group residential development" }],
+    images: [{ url: "/figma/viewall-projects/hero.webp", width: 3500, height: 2060, alt: "OIA Group residential development" }],
   },
-  twitter: { card: "summary_large_image", title: "OIA Group", description: "Premium residential developments created for modern Australian living.", images: ["/figma/viewall-projects/hero.png"] },
+  twitter: { card: "summary_large_image", title: "OIA Group", description: "Premium residential developments created for modern Australian living.", images: ["/figma/viewall-projects/hero.webp"] },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

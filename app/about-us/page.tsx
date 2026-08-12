@@ -27,7 +27,7 @@ export default function About() {
     </section>
 
     <section className="about-values">
-      <Image src="/figma/about/values.png" alt="OIA architecture, interiors and residential design" fill sizes="88vw" />
+      <Image src="/figma/about/values.webp" alt="OIA architecture, interiors and residential design" fill sizes="88vw" />
       <div className="about-value-shades"><i /><i /><i /></div>
       <div className="about-value-labels"><h2>Smart living</h2><h2>Eco construction</h2><h2>Awarded design</h2></div>
     </section>
