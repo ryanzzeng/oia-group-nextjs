@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { BrandedFooter, ImageHero, PillLink } from "./components/site";
 import { FeaturedNewsCarousel } from "./components/featured-news-carousel";
+import { HomeIntroSlider } from "./components/home-intro-slider";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
 
@@ -16,15 +17,7 @@ export default function Home() {
   return <div className="oia-home">
     <ImageHero className="oia-hero" image="/figma/viewall-projects/hero.webp" alt="OIA residential development on a landscaped city street" title={<>Your home,<br />our priority</>} />
 
-    <section className="oia-intro">
-      <div className="intro-visual"><Image src="/figma/intro.png" alt="Contemporary blue glass architecture" fill sizes="45vw" /></div>
-      <div className="intro-copy">
-        <h2>OIA Group</h2>
-        <p><b>Introduction</b> Established in 2016, China Oriental Investment is a wholly-owned subsidiary of China Oriental Group Co Ltd (0581.HK) in Australia. As a crucial overseas business branch of the group, the company specialises in real estate investment.</p>
-        <p>The company identifies and develops promising residential, commercial and land projects. Its portfolio includes IQ Burwood, Lighthouse Burwood, View Point Hurstville, Ridge Park Estate and Denman Park Estate.</p>
-        <PillLink href="/about-us">About us</PillLink>
-      </div>
-    </section>
+    <HomeIntroSlider />
 
     <section className="finance">
       <h2>Our financial profile</h2>
