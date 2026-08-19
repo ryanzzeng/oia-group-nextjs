@@ -83,7 +83,7 @@ export default function ViewAllProjects() {
           <h2>{project.name}</h2>
           <h3>{project.location}</h3>
           <p>{project.description}</p>
-          <ProjectLink />
+          {/* <ProjectLink /> */}
         </div>
       </article>)}
     </section>
