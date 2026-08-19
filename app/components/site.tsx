@@ -27,8 +27,12 @@ export function PillLink({ href, children, className = "", arrow = "→" }: { hr
 
 export function BrandedFooter({ className = "brand-footer" }: { className?: string }) {
   return <footer className={className}>
-    <div className="brand-footer-intro"><h2>Contact us</h2><a href="mailto:admin@oiagroup.com.au">admin@oiagroup.com.au</a></div>
     <nav aria-label="Footer navigation">{navigation.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}</nav>
+    <address className="brand-footer-contact">
+      <a href="tel:+61296427718">PH: (02) 9642 7718</a>
+      <a href="mailto:info@oiagroup.com.au">EMAIL: info@oiagroup.com.au</a>
+      <span>Suite 12.01, Level 12, Tower 1, 495 Victoria<br />Avenue, Chatswood, NSW 2067</span>
+    </address>
     <div className="brand-footer-legal"><Link href="#">Privacy Policy</Link><span>©OIA 2026</span><Link className="brand-footer-mark" href="/" aria-label="OIA Group home"><Image src="/figma/projects-page/raw-12.png" alt="" width={102} height={102} /></Link></div>
   </footer>;
 }

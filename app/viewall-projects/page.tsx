@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { BrandedFooter, ImageHero, PillLink } from "../components/site";
-import { ProjectEnquiry } from "../components/project-enquiry";
 
 export const metadata: Metadata = { title: "Project Showcase", description: "View OIA Group residential projects across Chatswood, Burwood, Hornsby, the Central Coast and Hunter Valley.", alternates: { canonical: "/viewall-projects/" } };
 
@@ -84,12 +83,10 @@ export default function ViewAllProjects() {
           <h2>{project.name}</h2>
           <h3>{project.location}</h3>
           <p>{project.description}</p>
-          <ProjectLink />
+          {/* <ProjectLink /> */}
         </div>
       </article>)}
     </section>
-
-    <ProjectEnquiry />
 
     <BrandedFooter />
   </div>;

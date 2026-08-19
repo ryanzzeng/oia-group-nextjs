@@ -2,25 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { BrandedFooter, ImageHero, PillLink } from "../components/site";
-import { ProjectEnquiry } from "../components/project-enquiry";
+import { PropertyProfile } from "../components/property-profile";
+import { ProjectValuesReveal } from "../components/project-values-reveal";
 
 export const metadata: Metadata = { title: "Projects", description: "Explore OIA Group’s premium residential developments and approach to modern Australian living.", alternates: { canonical: "/projects/" } };
-
-const figures = [
-  ["LAND", "412", "Sqm"],
-  ["CAR PARK", "519", "Parking Space"],
-  ["BUILT", "170", "Apartments"],
-  ["TOTAL ROOM", "262", "Rooms"],
-];
-
-const values = [
-  ["SMART LIVING", "Integrate technology, sustainability, and convenience to improve residents’ quality of life."],
-  ["ECO CONSTRUCTION", "Designing and building properties in ways that reduce environmental impact, conserve resources, and promote long-term sustainability."],
-  ["HUMAN IN MIND", "Homes and communities are designed around the needs, comfort, and lifestyle of the people who live in them."],
-  ["ATTRACTIVE LOCATION", "Integrate technology, sustainability, and convenience to improve residents’ quality of life."],
-  ["MODERN TECHNOLOGY", "Not only built with advanced methods but also equipped with future-ready innovations that enhance daily life."],
-  ["AWARDED DESIGN", "Homes and communities designed with the same quality, innovation, and beauty that win international recognition."],
-];
 
 export default function Projects() {
   return <div className="projects-figma">
@@ -31,9 +16,7 @@ export default function Projects() {
       <p>OIA Group creates premium residential developments designed for modern Australian living. Guided by quality, sustainability and strategic location, the group delivers thoughtfully designed homes and communities that offer lasting value, lifestyle convenience and refined living experiences.</p>
     </section>
 
-    <section className="projects-figures" aria-label="Project statistics">
-      {figures.map(([label, value, unit]) => <article key={label}><h3>{label}</h3><strong>{value}</strong><p>{unit}</p></article>)}
-    </section>
+    <PropertyProfile />
 
     <section className="featured-projects">
       <Link className="featured-tall interactive-image" href="/viewall-projects" aria-label="View featured projects">
@@ -52,11 +35,7 @@ export default function Projects() {
       <Image src="/figma/projects.webp" alt="Premium apartment living and dining room" fill sizes="94vw" />
     </section>
 
-    <section className="projects-values">
-      {values.map(([title, body], index) => <article key={title}><div><h2>{title}</h2><span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span></div><p>{body}</p></article>)}
-    </section>
-
-    <ProjectEnquiry />
+    <ProjectValuesReveal />
 
     <BrandedFooter />
   </div>;

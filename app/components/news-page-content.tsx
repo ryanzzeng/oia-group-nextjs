@@ -5,12 +5,11 @@ import Link from "next/link";
 import { useState } from "react";
 import { BrandedFooter, ImageHero, PillLink } from "./site";
 
-const articleHref = "/news-single-page";
 const stories = [
-  { title: "Beijing Jinxi Centennial Architectural Design", date: "2025-10-09", label: "Published October 9th 2025", image: "/figma/news-single/tower.png", alt: "Beijing Jinxi tower" },
-  { title: "Beijing Jinxi Green Building Technology Industry Group", date: "2025-10-11", label: "Published October 11th 2025", image: "/figma/news-page/city.png", alt: "Waterfront skyline at dusk" },
-  { title: "JinXi DongHuWan Project", date: "2025-10-09", label: "Published October 9th 2025", image: "/figma/news-main.png", alt: "JinXi DongHuWan commercial building" },
-  { title: "Beijing Jinxi Boyuan Real Estate Co, Ltd", date: "2025-10-09", label: "Published October 9th 2025", image: "/figma/news-single/architecture.png", alt: "Contemporary high-rise architecture" },
+  { title: "Beijing Jinxi Centennial Architectural Design", date: "2025-10-09", label: "Published October 9th 2025", image: "/figma/news-single/tower.png", alt: "Beijing Jinxi tower", href: "/news/bjcad" },
+  { title: "Beijing Jinxi Green Building Technology Industry Group", date: "2025-10-11", label: "Published October 11th 2025", image: "/figma/news-page/city.png", alt: "Waterfront skyline at dusk", href: "/news/bjgbt" },
+  { title: "JinXi DongHuWan Project", date: "2025-10-09", label: "Published October 9th 2025", image: "/figma/news-main.png", alt: "JinXi DongHuWan commercial building", href: "/news/jxdhw" },
+  { title: "Beijing Jinxi Boyuan Real Estate Co, Ltd", date: "2025-10-09", label: "Published October 9th 2025", image: "/figma/news-single/architecture.png", alt: "Contemporary high-rise architecture", href: "/news/bjby" },
 ];
 
 export function NewsPageContent() {
@@ -31,12 +30,12 @@ export function NewsPageContent() {
 
     <div className={`figma-news-content${expanded ? " is-expanded" : ""}`} id="news-list">
       {stories.slice(0, expanded ? 4 : 2).map((story, index) => <article className={`figma-news-story ${index === 0 ? "figma-news-story-first" : "figma-news-story-featured"}`} key={story.title}>
-        <Link className="card-hit-area" href={articleHref} aria-label={`Read ${story.title}`} />
+        <Link className="card-hit-area" href={story.href} aria-label={`Read ${story.title}`} />
         <div className="figma-news-copy">
           <span>News</span>
           <h2>{story.title}</h2>
           <time dateTime={story.date}>{story.label}</time>
-          <PillLink href={articleHref}>Read more</PillLink>
+          <PillLink href={story.href}>Read more</PillLink>
         </div>
         <div className="figma-news-city">
           <Image src={story.image} alt={story.alt} fill sizes="(max-width: 760px) 86vw, 49vw" />
