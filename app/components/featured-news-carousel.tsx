@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { PillLink } from "./site";
 
-const articleHref = "/news/oia-group-designing-for-the-future";
+const articleHref = "/news/bjcad";
 
 export function FeaturedNewsCarousel() {
   const trackRef = useRef<HTMLDivElement>(null);

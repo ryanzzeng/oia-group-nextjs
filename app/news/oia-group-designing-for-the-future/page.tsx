@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { BrandedFooter, PillLink } from "../../components/site";
+import { BrandedFooter } from "../../components/site";
+import { NewsFeaturedSlider } from "../../components/news-featured-slider";
 
 export const metadata: Metadata = {
   title: "Beijing Jinxi Centennial Architectural Design",
   description: "Beijing Jinxi Centennial Architectural Design and its development history.",
-  alternates: { canonical: "/news-single-page/" },
+  alternates: { canonical: "/news/bjcad/" },
 };
 
 const history = [
@@ -23,7 +24,6 @@ export default function NewsArticle() {
       <Image src="/figma/news-single/hero.png" alt="Beijing Jinxi office towers" fill priority sizes="100vw" />
       <div className="single-news-overlay" />
       <div className="single-news-title"><span>News</span><h1>Beijing Jinxi Centennial Architectural Design</h1></div>
-      <p className="single-news-byline">By <a href="mailto:contact.aoigroup@gmail.com">contact.aoigroup@gmail.com</a> <span>Company</span></p>
     </section>
 
     <section className="single-news-summary">
@@ -50,13 +50,7 @@ export default function NewsArticle() {
       </div>
     </section>
 
-    <section className="single-news-featured">
-      <h2>Featured News</h2>
-      <div className="single-news-gallery">
-        {["waterfront.png", "tower.png", "architecture.png", "waterfront.png"].map((image, index) => <div key={`${image}-${index}`}><Image src={`/figma/news-single/${image}`} alt="" fill sizes="28vw" /></div>)}
-      </div>
-      <PillLink href="/news">View all news</PillLink>
-    </section>
+    <NewsFeaturedSlider />
 
     <BrandedFooter />
   </article>;
