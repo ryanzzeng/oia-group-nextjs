@@ -8,7 +8,10 @@ export function MotionEnhancements() {
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const elements = document.querySelectorAll<HTMLElement>("section:not(:first-child), .showcase-project, .figma-news-story, .single-news-milestone");
+    const selector = pathname === "/viewall-projects"
+      ? ".showcase-intro > *, .showcase-collection, .showcase-project-image, .showcase-project-copy"
+      : "section:not(:first-child), .showcase-project, .figma-news-story, .single-news-milestone";
+    const elements = document.querySelectorAll<HTMLElement>(selector);
     elements.forEach(element => element.classList.add("reveal-ready"));
     const observer = new IntersectionObserver(entries => entries.forEach(entry => {
       if (entry.isIntersecting) {
