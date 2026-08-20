@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { SiteHeader } from "./components/site";
 import { MotionEnhancements } from "./components/motion-enhancements";
@@ -18,6 +18,13 @@ export const metadata: Metadata = {
     images: [{ url: "/figma/viewall-projects/hero.webp", width: 3500, height: 2060, alt: "OIA Group residential development" }],
   },
   twitter: { card: "summary_large_image", title: "OIA Group", description: "Premium residential developments created for modern Australian living.", images: ["/figma/viewall-projects/hero.webp"] },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#204c9c",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

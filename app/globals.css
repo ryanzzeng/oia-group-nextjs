@@ -276,6 +276,7 @@ footer.brand-footer{position:relative;display:block;width:100%;height:420px;min-
 /* Home mobile layout */
 @media(max-width:760px){
   body:has(.oia-home){overflow-x:hidden;background:#fff}
+  .oia-home{width:100%;max-width:100%;overflow:hidden}
   body:has(.oia-home) .site-header{height:88px;padding:0 5.5%}
   .oia-home .oia-hero{height:78svh;min-height:560px;max-height:760px}
   .oia-home .oia-hero>img{object-position:56% center}
@@ -299,10 +300,19 @@ footer.brand-footer{position:relative;display:block;width:100%;height:420px;min-
   .oia-home .featured-news{padding:82px 0 88px}
   .oia-home .featured-news>h2{margin:0 6.5% 42px;font-size:clamp(38px,10.5vw,50px);line-height:1}
   .oia-home .featured-news-track{grid-template-columns:86vw 86vw 86vw;gap:4vw;padding-left:6.5%;padding-right:7.5%;scroll-padding-left:6.5%}
+  .oia-home .featured-news-track{touch-action:pan-x;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
   .oia-home .feature-card--lead,.oia-home .feature-card--end,.oia-home .feature-card-stack{height:122vw;max-height:570px}
   .oia-home .feature-card--lead .feature-card-copy strong,.oia-home .feature-card--end .feature-card-copy strong{font-size:clamp(32px,9.5vw,44px)}
   .oia-home .featured-news>.oia-button{width:87%;margin-top:42px}
   .oia-home>.brand-footer{width:100%;margin:0}
+}
+
+@media(max-width:430px){
+  .oia-home .oia-hero h1{font-size:clamp(40px,11.5vw,50px)}
+  .oia-home .home-intro-banner{padding-left:20px;padding-right:20px}
+  .oia-home .project-story{padding-left:20px;padding-right:20px}
+  .oia-home .partners{padding-left:24px;padding-right:24px}
+  .oia-home .featured-news>h2{margin-left:20px;margin-right:20px}
 }
 
 /* Redesigned shared footer. */
