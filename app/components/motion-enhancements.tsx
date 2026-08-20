@@ -12,7 +12,7 @@ export function MotionEnhancements() {
       ? ".showcase-intro > *, .showcase-collection, .showcase-project-image, .showcase-project-copy"
       : pathname === "/news"
         ? ".figma-news-intro > *, .figma-news-story .figma-news-copy, .figma-news-story .figma-news-city"
-        : "section:not(:first-child), .showcase-project, .figma-news-story, .single-news-milestone";
+        : ".single-news-milestone";
     const observer = new IntersectionObserver(entries => entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("is-revealed");
