@@ -4,9 +4,9 @@ import { BrandedFooter, PillLink } from "./site";
 export type NewsArticleData = { title: string; hero: string; heroAlt: string; summary: string; sections: Array<{ heading?: string; body: string[]; images?: Array<{ src: string; alt: string }> }> };
 
 const featured = [
-  { src: "/figma/news-page/city.png", alt: "Waterfront skyline" },
-  { src: "/figma/news-single/tower.png", alt: "Jinxi tower" },
-  { src: "/figma/news-single/architecture.png", alt: "Contemporary architecture" },
+  { src: "/figma/news-page/city.webp", alt: "Waterfront skyline" },
+  { src: "/figma/news-single/tower.webp", alt: "Jinxi tower" },
+  { src: "/figma/news-single/architecture.webp", alt: "Contemporary architecture" },
 ];
 
 export function NewsArticlePage({ article }: { article: NewsArticleData }) {

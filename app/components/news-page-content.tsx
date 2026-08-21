@@ -6,10 +6,10 @@ import { useState } from "react";
 import { BrandedFooter, ImageHero, PillLink } from "./site";
 
 const stories = [
-  { title: "Beijing Jinxi Centennial Architectural Design", date: "2025-10-09", label: "Published October 9th 2025", image: "/figma/news-single/tower.png", alt: "Beijing Jinxi tower", href: "/news/bjcad" },
-  { title: "Beijing Jinxi Green Building Technology Industry Group", date: "2025-10-11", label: "Published October 11th 2025", image: "/figma/news-page/city.png", alt: "Waterfront skyline at dusk", href: "/news/bjgbt" },
-  { title: "JinXi DongHuWan Project", date: "2025-10-09", label: "Published October 9th 2025", image: "/figma/news-main.png", alt: "JinXi DongHuWan commercial building", href: "/news/jxdhw" },
-  { title: "Beijing Jinxi Boyuan Real Estate Co, Ltd", date: "2025-10-09", label: "Published October 9th 2025", image: "/figma/news-single/architecture.png", alt: "Contemporary high-rise architecture", href: "/news/bjby" },
+  { title: "Beijing Jinxi Centennial Architectural Design", date: "2025-10-09", label: "Published October 9th 2025", image: "/figma/news-single/tower.webp", alt: "Beijing Jinxi tower", href: "/news/bjcad" },
+  { title: "Beijing Jinxi Green Building Technology Industry Group", date: "2025-10-11", label: "Published October 11th 2025", image: "/figma/news-page/city.webp", alt: "Waterfront skyline at dusk", href: "/news/bjgbt" },
+  { title: "JinXi DongHuWan Project", date: "2025-10-09", label: "Published October 9th 2025", image: "/figma/news-main.webp", alt: "JinXi DongHuWan commercial building", href: "/news/jxdhw" },
+  { title: "Beijing Jinxi Boyuan Real Estate Co, Ltd", date: "2025-10-09", label: "Published October 9th 2025", image: "/figma/news-single/architecture.webp", alt: "Contemporary high-rise architecture", href: "/news/bjby" },
 ];
 
 export function NewsPageContent() {
@@ -21,7 +21,7 @@ export function NewsPageContent() {
   };
 
   return <div className="news-figma">
-    <ImageHero className="news-hero" image="/figma/intro.png" alt="Contemporary blue glass architecture" title={expanded ? "All news" : "Recent news"} />
+    <ImageHero className="news-hero" image="/figma/intro.webp" alt="Contemporary blue glass architecture" title={expanded ? "All news" : "Recent news"} />
 
     {!expanded && <section className="figma-news-intro">
       <h2>OIA GROUP<br />introducing a new way to showcase properties</h2>

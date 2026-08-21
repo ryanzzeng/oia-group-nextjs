@@ -24,7 +24,7 @@ export default function Projects() {
         <h2>Featured<br />projects</h2>
       </Link>
       <div className="featured-stack">
-        <Link className="interactive-image" href="/viewall-projects" aria-label="View residential townhouse project"><Image src="/figma/projects-page/raw-7.png" alt="Residential townhouse development" fill sizes="48vw" /></Link>
+        <Link className="interactive-image" href="/viewall-projects" aria-label="View residential townhouse project"><Image src="/figma/projects-page/raw-7.webp" alt="Residential townhouse development" fill sizes="48vw" /></Link>
         <Link className="interactive-image" href="/viewall-projects" aria-label="View residential tower project"><Image src="/figma/projects-page/raw-3.webp" alt="Modern residential towers" fill sizes="48vw" /></Link>
       </div>
     </section>

@@ -68,7 +68,7 @@ export function FeaturedNewsCarousel() {
           }}
         >
         <Link className="feature-card feature-card--lead" href={articleHref} style={{ position: "relative" }}>
-          <Image src="/figma/news-single/hero.png" alt="Beijing Jinxi glass towers" fill sizes="(max-width: 760px) 84vw, 36vw" priority={false} />
+          <Image src="/figma/news-single/hero.webp" alt="Beijing Jinxi glass towers" fill sizes="(max-width: 760px) 84vw, 36vw" priority={false} />
           <span className="feature-card-shade" />
           <span className="feature-card-copy feature-card-copy--top">
             <time>October 9 2025</time>
@@ -78,7 +78,7 @@ export function FeaturedNewsCarousel() {
 
         <div className="feature-card-stack">
           <Link className="feature-card" href={articleHref} style={{ position: "relative" }}>
-            <Image src="/figma/news-main.png" alt="JinXi DongHuWan commercial building" fill sizes="(max-width: 760px) 84vw, 29vw" />
+            <Image src="/figma/news-main.webp" alt="JinXi DongHuWan commercial building" fill sizes="(max-width: 760px) 84vw, 29vw" />
             <span className="feature-card-shade" />
             <span className="feature-card-copy">
               <strong>JinXi DongHuWan<br />Project</strong>
@@ -86,7 +86,7 @@ export function FeaturedNewsCarousel() {
             </span>
           </Link>
           <Link className="feature-card" href={articleHref} style={{ position: "relative" }}>
-            <Image src="/figma/news-page/city.png" alt="Beijing waterfront skyline" fill sizes="(max-width: 760px) 84vw, 29vw" />
+            <Image src="/figma/news-page/city.webp" alt="Beijing waterfront skyline" fill sizes="(max-width: 760px) 84vw, 29vw" />
             <span className="feature-card-shade" />
             <span className="feature-card-copy">
               <strong>Beijing Jinxi Green Building<br />Technology Industry Group<br />Co., Ltd</strong>
@@ -97,7 +97,7 @@ export function FeaturedNewsCarousel() {
 
         <article className="feature-card feature-card--end" style={{ position: "relative" }}>
           <Link className="feature-card-link" href={articleHref} aria-label="Read OIA China Oriental Group news" />
-          <Image src="/figma/news-page/oia-oriental-tower.png" alt="OIA China Oriental Group office tower" fill sizes="(max-width: 760px) 84vw, 32vw" />
+          <Image src="/figma/news-page/oia-oriental-tower.webp" alt="OIA China Oriental Group office tower" fill sizes="(max-width: 760px) 84vw, 32vw" />
           <span className="feature-card-shade" />
           <span className="feature-card-copy feature-card-copy--top">
             <time>October 9 2025</time>

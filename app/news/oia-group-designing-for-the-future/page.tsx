@@ -21,7 +21,7 @@ const history = [
 export default function NewsArticle() {
   return <article className="article-figma single-news">
     <section className="single-news-hero">
-      <Image src="/figma/news-single/hero.png" alt="Beijing Jinxi office towers" fill priority sizes="100vw" />
+      <Image src="/figma/news-single/hero.webp" alt="Beijing Jinxi office towers" fill priority sizes="100vw" />
       <div className="single-news-overlay" />
       <div className="single-news-title"><span>News</span><h1>Beijing Jinxi Centennial Architectural Design</h1></div>
     </section>
@@ -31,7 +31,7 @@ export default function NewsArticle() {
     </section>
 
     <section className="single-news-overview">
-      <div className="single-news-tower"><Image src="/figma/news-single/tower.png" alt="Jinxi tower" fill sizes="30vw" /></div>
+      <div className="single-news-tower"><Image src="/figma/news-single/tower.webp" alt="Jinxi tower" fill sizes="30vw" /></div>
       <div className="single-news-copy">
         <p>Since 2003, Jinxi Group has been ranked among the Top 500 Enterprises in China for 22 consecutive years, and has been awarded honors such as the National May Day Labor Award and National Civilized Unit.</p>
         <p>Adhering to its market positioning as a promoter and practitioner of prefabricated steel-structure architecture, the group has successfully developed a comprehensive industrial chain for steel-structure building, pioneering a distinctive Jinxi-style path for industry innovation and sustainable growth.</p>
@@ -46,7 +46,7 @@ export default function NewsArticle() {
         {history.map(([year, text], index) => <div className={`single-news-milestone milestone-${index + 1}`} key={year}>
           <h3>{year}</h3><p>{text}</p>
         </div>)}
-        <div className="single-news-plans"><Image src="/figma/news-single/plans.png" alt="Architectural plans" fill sizes="38vw" /></div>
+        <div className="single-news-plans"><Image src="/figma/news-single/plans.webp" alt="Architectural plans" fill sizes="38vw" /></div>
       </div>
     </section>
 

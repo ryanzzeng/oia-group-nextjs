@@ -6,10 +6,10 @@ import { useRef, useState } from "react";
 import { PillLink } from "./site";
 
 const stories = [
-  { href: "/news/bjcad", image: "/figma/news-single/tower.png", title: "Beijing Jinxi Centennial Architectural Design" },
-  { href: "/news/bjgbt", image: "/figma/news-page/city.png", title: "Beijing Jinxi Green Building Technology Industry Group" },
-  { href: "/news/jxdhw", image: "/figma/news-donghuwan/aerial.png", title: "Jinxi Donghuwan Project" },
-  { href: "/news/bjby", image: "/figma/news-boyuan/hero-hd.png", title: "Beijing Jinxi Boyuan Real Estate Co" },
+  { href: "/news/bjcad", image: "/figma/news-single/tower.webp", title: "Beijing Jinxi Centennial Architectural Design" },
+  { href: "/news/bjgbt", image: "/figma/news-page/city.webp", title: "Beijing Jinxi Green Building Technology Industry Group" },
+  { href: "/news/jxdhw", image: "/figma/news-donghuwan/aerial.webp", title: "Jinxi Donghuwan Project" },
+  { href: "/news/bjby", image: "/figma/news-boyuan/hero-hd.webp", title: "Beijing Jinxi Boyuan Real Estate Co" },
 ];
 
 export function NewsFeaturedSlider() {

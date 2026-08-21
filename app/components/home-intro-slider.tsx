@@ -29,7 +29,7 @@ export function HomeIntroSlider() {
   return (
     <section ref={sectionRef} className={`home-intro-slider home-intro-banner${entered ? " is-entered" : ""}`}>
       <div className="home-intro-image">
-        <Image src="/figma/home-1.png" alt="Modern OIA Group architecture viewed from below" fill sizes="(max-width: 760px) 86vw, 42vw" />
+        <Image src="/figma/home-1.webp" alt="Modern OIA Group architecture viewed from below" fill sizes="(max-width: 760px) 86vw, 42vw" />
       </div>
       <div className="home-intro-copy">
         <h2>OIA Group</h2>

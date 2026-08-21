@@ -8,12 +8,12 @@ export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 export default function Home() {
   return <div className="oia-home">
-    <ImageHero className="oia-hero" image="/figma/hero.png" alt="OIA residential development on a landscaped city street" title={<>Your home,<br />our priority</>} />
+    <ImageHero className="oia-hero" image="/figma/hero.webp" alt="OIA residential development on a landscaped city street" title={<>Your home,<br />our priority</>} />
 
     <HomeIntroSlider />
 
     <section className="projects-showcase">
-      <Image src="/figma/home-2.png" alt="Illuminated entrance to an OIA residential development" fill sizes="100vw" />
+      <Image src="/figma/home-2.webp" alt="Illuminated entrance to an OIA residential development" fill sizes="100vw" />
       <div className="projects-shade" />
       <h2>Our projects</h2>
     </section>
