@@ -9,10 +9,11 @@ const navigation = [
   ["News", "/news"],
 ] as const;
 
-export function ImageHero({ className, image, alt, title }: { className: string; image: string; alt: string; title: React.ReactNode }) {
+export function ImageHero({ className, image, alt, title, eyebrow }: { className: string; image: string; alt: string; title: React.ReactNode; eyebrow?: React.ReactNode }) {
   return <section className={className}>
     <Image src={image} alt={alt} fill priority sizes="100vw" />
     <div className={`${className}-shade`} />
+    {eyebrow && <p className={`${className}-eyebrow`}>{eyebrow}</p>}
     <h1>{title}</h1>
   </section>;
 }

@@ -31,12 +31,49 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return <html lang="en" data-scroll-behavior="smooth"><body>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "OIA Group",
-      url: "https://oia.group",
-      logo: "https://oia.group/figma/projects-page/raw-12.png",
-      email: "admin@oiagroup.com.au",
-      description: "Premium residential property development and investment company operating across Australia.",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://oia.group/#organization",
+          name: "OIA Group",
+          legalName: "Oriental Investment Australia Pty Ltd",
+          url: "https://oia.group/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://oia.group/figma/projects-page/raw-12.png",
+          },
+          email: "info@oiagroup.com.au",
+          telephone: "+61 2 9642 7718",
+          description: "Sydney-based residential property development and investment company operating across Australia.",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Suite 12.01, Level 12, Tower 1, 495 Victoria Avenue",
+            addressLocality: "Chatswood",
+            addressRegion: "NSW",
+            postalCode: "2067",
+            addressCountry: "AU",
+          },
+          areaServed: { "@type": "Country", name: "Australia" },
+          parentOrganization: { "@type": "Organization", name: "China Oriental Group Company Limited" },
+          contactPoint: {
+            "@type": "ContactPoint",
+            telephone: "+61 2 9642 7718",
+            email: "info@oiagroup.com.au",
+            contactType: "customer enquiries",
+            areaServed: "AU",
+            availableLanguage: "English",
+          },
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://oia.group/#website",
+          url: "https://oia.group/",
+          name: "OIA Group",
+          description: "Premium residential and mixed-use property developments across Sydney and Australia.",
+          publisher: { "@id": "https://oia.group/#organization" },
+          inLanguage: "en-AU",
+        },
+      ],
     }).replace(/</g, "\\u003c") }} />
     <SiteHeader />
     <MotionEnhancements />
