@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: "Jinxi Donghuwan Project", alternates
 
 export default function JinxiDonghuwanPage() {
   return <article className="donghu-news-page">
-    <section className="donghu-news-hero"><Image src="/figma/news-main.webp" alt="Glass commercial architecture" fill priority sizes="100vw" /><div className="donghu-news-hero-copy"><span>News</span><h1>Jinxi<br />Donghuwan<br />Project</h1></div></section>
+    <section className="donghu-news-hero"><Image src="/figma/news-donghuwan/hero-clean.webp" alt="Glass commercial architecture" fill priority quality={90} sizes="100vw" /><div className="donghu-news-hero-shade" /><div className="donghu-news-hero-copy"><span>News</span><h1>Jinxi<br />Donghuwan<br />Project</h1></div></section>
     <section className="donghu-news-summary"><p>The Jinxi·Donghu Bay Project leverages the region’s combined strengths in local resources and industry, serving as a classic example of excellence in project operation, construction, land development, and property management. It represents Beijing Real Estate’s successful model for improving residential living standards in the area.</p></section>
     <section className="donghu-news-story">
       <div className="donghu-news-aerial"><Image src="/figma/news-donghuwan/aerial.webp" alt="Jinxi Donghu Bay residential masterplan" fill sizes="78vw" /></div>
