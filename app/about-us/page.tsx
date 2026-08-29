@@ -11,9 +11,9 @@ export default function About() {
     <section className="about-introduction">
       <h2><span>OIA Group</span><br />introducing a new way to showcase properties</h2>
       <div>
-        <p>Currently, the company is undertaking several premium residential projects. Mildred Garden in Hornsby involves the construction of 20 well-designed, high-quality townhouses in a vibrant and convenient neighbourhood. The Killara luxury townhouse project consists of seven exclusive residences in Sydney’s prestigious Upper North Shore, combining exceptional design, craftsmanship and sophistication.</p>
-        <p>In addition, Australia Oriental Investment is developing a luxury duplex project in Epping, premium detached villas in Bellevue Hill, and a high-end residential tower in Chatswood.</p>
-        <p>These projects reflect the company’s commitment to superior architecture, prime locations and distinctive, high-quality living experiences. Through these developments, Australia Oriental Investment continues to enhance its reputation in the Australian property market, delivering long-term value and a refined lifestyle for residents.</p>
+        <p>Currently, the company is undertaking several premium residential projects. Mildred Garden in Hornsby involves the construction of 20 well-designed, high-quality townhouses in a vibrant and convenient neighbourhood. The Killara luxury townhouse project consists of 7 exclusive residences in Sydney’s prestigious Upper North Shore, combining exceptional design, craftsmanship, and sophistication. In addition, Oriental Investment Australia is developing a luxury duplex project in Epping, premium detached villas in Bellevue Hill, and a high-end residential tower in Chatswood.</p>
+        <p>These projects reflect the company’s commitment to superior architecture, prime locations, and the creation of distinctive, high-quality living experiences.</p>
+        <p>Through these developments, Oriental Investment Australia continues to enhance its reputation in the Australian property market, delivering projects that provide long-term value and a refined lifestyle for residents.</p>
       </div>
     </section>
 
