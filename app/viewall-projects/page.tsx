@@ -5,7 +5,7 @@ import { BrandedFooter, ImageHero } from "../components/site";
 import { ItemListSeo, PageSeo } from "../components/page-seo";
 
 const description = "View OIA Group residential projects across Chatswood, Burwood, Hornsby, the Central Coast and Hunter Valley.";
-export const metadata: Metadata = { title: "Project Showcase", description, alternates: { canonical: "/viewall-projects/" }, openGraph: { type: "website", title: "Project Showcase | OIA Group", description, url: "/viewall-projects/", images: [{ url: "/figma/viewall-projects/hero-latest.webp", alt: "The Chatswood Collection" }] }, twitter: { card: "summary_large_image", title: "Project Showcase | OIA Group", description, images: ["/figma/viewall-projects/hero-latest.webp"] } };
+export const metadata: Metadata = { title: "Project Showcase", description, alternates: { canonical: "/viewall-projects/" }, openGraph: { type: "website", title: "Project Showcase | OIA Group", description, url: "/viewall-projects/", images: [{ url: "/figma/viewall-projects/hero-seo.webp", alt: "The Chatswood Collection" }] }, twitter: { card: "summary_large_image", title: "Project Showcase | OIA Group", description, images: ["/figma/viewall-projects/hero-seo.webp"] } };
 
 const projects = [
   {
@@ -65,7 +65,7 @@ export default function ViewAllProjects() {
   return <div className="showcase-page">
     <PageSeo name="OIA Group Project Showcase" description={description} path="/viewall-projects/" breadcrumbs={[{ name: "Home", path: "/" }, { name: "Residential Projects", path: "/projects/" }, { name: "Project Showcase", path: "/viewall-projects/" }]} />
     <ItemListSeo name="OIA Group residential projects" items={projects.map((project) => ({ name: project.name, path: `/viewall-projects/#${project.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}` }))} />
-    <ImageHero className="showcase-hero" image="/figma/viewall-projects/hero-latest.webp" alt="The Chatswood Collection mixed-use development" title="Project showcase" />
+    <ImageHero className="showcase-hero" image="/figma/viewall-projects/hero-seo.webp" alt="The Chatswood Collection mixed-use development" title="Project showcase" />
 
     <section className="showcase-intro">
       <div><span>New development</span><h2>The Chatswood Collection</h2></div>
@@ -79,7 +79,7 @@ export default function ViewAllProjects() {
 
     <section className="showcase-list">
       {projects.map((project) => <article id={project.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")} className={`showcase-project image-${project.side}`} key={project.name}>
-        <Link className="card-hit-area" href="/projects" aria-label={`View ${project.name}`} />
+        <Link className="card-hit-area" href={`/viewall-projects/#${project.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`} aria-label={`View ${project.name} details`} />
         <div className="showcase-project-image"><Image src={project.image} alt={`${project.name} development`} fill sizes="55vw" /></div>
         <div className="showcase-project-copy">
           <span>Australian projects</span>

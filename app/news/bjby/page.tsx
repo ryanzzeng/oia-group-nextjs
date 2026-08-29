@@ -5,7 +5,7 @@ import { NewsFeaturedSlider } from "../../components/news-featured-slider";
 import { NewsSeo } from "../../components/news-seo";
 
 const description = "Learn about Beijing Jinxi Boyuan Real Estate, its integrated development strategy and prefabricated green-building operations across China.";
-export const metadata: Metadata = { title: "Beijing Jinxi Boyuan Real Estate", description, alternates: { canonical: "/news/bjby/" }, openGraph: { type: "article", title: "Beijing Jinxi Boyuan Real Estate | OIA Group", description, url: "/news/bjby/", images: [{ url: "/figma/news-boyuan/hero-hd.webp", alt: "Beijing Jinxi Boyuan Real Estate" }] }, twitter: { card: "summary_large_image", title: "Beijing Jinxi Boyuan Real Estate | OIA Group", description, images: ["/figma/news-boyuan/hero-hd.webp"] } };
+export const metadata: Metadata = { title: "Beijing Jinxi Boyuan Real Estate", description, alternates: { canonical: "/news/bjby/" }, openGraph: { type: "article", title: "Beijing Jinxi Boyuan Real Estate | OIA Group", description, url: "/news/bjby/", publishedTime: "2025-10-09", modifiedTime: "2026-08-29", authors: ["OIA Group"], images: [{ url: "/figma/news-boyuan/hero-hd.webp", alt: "Beijing Jinxi Boyuan Real Estate" }] }, twitter: { card: "summary_large_image", title: "Beijing Jinxi Boyuan Real Estate | OIA Group", description, images: ["/figma/news-boyuan/hero-hd.webp"] } };
 
 export default function BeijingJinxiBoyuanPage() {
   return <article className="boyuan-news-page">
