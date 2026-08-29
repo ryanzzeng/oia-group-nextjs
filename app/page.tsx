@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     url: "/",
     images: [{ url: "/figma/viewall-projects/hero.webp", width: 3500, height: 2060, alt: "OIA Group residential development" }],
   },
+  twitter: { card: "summary_large_image", title: "OIA Group | Sydney Residential Property Developer", description: "Discover OIA Group's premium residential and mixed-use property developments across Sydney and Australia.", images: ["/figma/viewall-projects/hero.webp"] },
 };
 
 export default function Home() {

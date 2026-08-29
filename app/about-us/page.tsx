@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { BrandedFooter, ImageHero, PillLink } from "../components/site";
+import { PageSeo } from "../components/page-seo";
 
-export const metadata: Metadata = { title: "About Us", description: "Learn about OIA Group’s residential property development portfolio, design approach and investment experience in Australia.", alternates: { canonical: "/about-us/" } };
+const description = "Learn about OIA Group’s residential property development portfolio, design approach and investment experience in Australia.";
+export const metadata: Metadata = { title: "About Us", description, alternates: { canonical: "/about-us/" }, openGraph: { type: "website", title: "About OIA Group", description, url: "/about-us/", images: [{ url: "/figma/about/hero.webp", alt: "OIA residential tower overlooking Sydney" }] }, twitter: { card: "summary_large_image", title: "About OIA Group", description, images: ["/figma/about/hero.webp"] } };
 
 export default function About() {
   return <div className="about-figma">
+    <PageSeo name="About OIA Group" description={description} path="/about-us/" breadcrumbs={[{ name: "Home", path: "/" }, { name: "About Us", path: "/about-us/" }]} />
     <ImageHero className="about-hero" image="/figma/about/hero.webp" alt="OIA residential tower overlooking Sydney" title="About us" />
 
     <section className="about-introduction">

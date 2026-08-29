@@ -4,11 +4,14 @@ import Link from "next/link";
 import { BrandedFooter, ImageHero, PillLink } from "../components/site";
 import { PropertyProfile } from "../components/property-profile";
 import { ProjectValuesReveal } from "../components/project-values-reveal";
+import { PageSeo } from "../components/page-seo";
 
-export const metadata: Metadata = { title: "Projects", description: "Explore OIA Group’s premium residential developments and approach to modern Australian living.", alternates: { canonical: "/projects/" } };
+const description = "Explore OIA Group’s premium residential developments and approach to modern Australian living.";
+export const metadata: Metadata = { title: "Residential Projects", description, alternates: { canonical: "/projects/" }, openGraph: { type: "website", title: "Residential Projects | OIA Group", description, url: "/projects/", images: [{ url: "/figma/projects-page/projects-hero-enhanced.webp", alt: "OIA Group residential projects" }] }, twitter: { card: "summary_large_image", title: "Residential Projects | OIA Group", description, images: ["/figma/projects-page/projects-hero-enhanced.webp"] } };
 
 export default function Projects() {
   return <div className="projects-figma">
+    <PageSeo name="OIA Group Residential Projects" description={description} path="/projects/" breadcrumbs={[{ name: "Home", path: "/" }, { name: "Residential Projects", path: "/projects/" }]} />
     <ImageHero className="projects-hero" image="/figma/projects-page/projects-hero-enhanced.webp" alt="Contemporary OIA bedroom interior" title="Our projects" />
 
     <section className="projects-intro">
