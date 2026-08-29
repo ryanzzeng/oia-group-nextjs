@@ -8,8 +8,8 @@ import { PillLink } from "./site";
 const stories = [
   { href: "/news/bjcad", image: "/figma/news-single/tower.webp", title: "Beijing Jinxi Centennial Architectural Design" },
   { href: "/news/bjgbt", image: "/figma/news-page/city.webp", title: "Beijing Jinxi Green Building Technology Industry Group" },
-  { href: "/news/jxdhw", image: "/figma/news-donghuwan/aerial.webp", title: "Jinxi Donghuwan Project" },
-  { href: "/news/bjby", image: "/figma/news-boyuan/hero-hd.webp", title: "Beijing Jinxi Boyuan Real Estate Co" },
+  { href: "/news/jxdhw", image: "/figma/news-donghuwan/aerial.webp", title: "Jinxi Donghuwan Project", treatment: "full-bleed" },
+  { href: "/news/bjby", image: "/figma/news-boyuan/hero-hd.webp", title: "Beijing Jinxi Boyuan Real Estate Co", treatment: "light-image" },
 ];
 
 export function NewsFeaturedSlider() {
@@ -35,7 +35,7 @@ export function NewsFeaturedSlider() {
   return <section className="news-featured-slider">
     <div className="news-featured-heading"><button type="button" onClick={() => goTo(active - 1)} aria-label="Previous featured news">←</button><h2>Featured News</h2><button type="button" onClick={() => goTo(active + 1)} aria-label="Next featured news">→</button></div>
     <div className="news-featured-track" ref={trackRef} onScroll={syncActive}>
-      {stories.map((story) => <Link className="news-featured-card" href={story.href} key={story.href}><Image src={story.image} alt="" fill sizes="(max-width: 760px) 78vw, 31vw" /><span>{story.title}</span></Link>)}
+      {stories.map((story) => <Link className={`news-featured-card${story.treatment ? ` news-featured-card--${story.treatment}` : ""}`} href={story.href} key={story.href}><Image src={story.image} alt="" fill sizes="(max-width: 760px) 78vw, 31vw" /><span>{story.title}</span></Link>)}
     </div>
     <div className="news-featured-dots" aria-label="Featured news slides">{stories.map((story, index) => <button key={story.href} type="button" className={active === index ? "is-active" : ""} onClick={() => goTo(index)} aria-label={`Go to featured news ${index + 1}`} aria-current={active === index ? "true" : undefined} />)}</div>
     <PillLink href="/news">View all news</PillLink>
