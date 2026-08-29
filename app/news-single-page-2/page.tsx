@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { NewsArticlePage, type NewsArticleData } from "../components/news-article-page";
 
-export const metadata: Metadata = { title: "Beijing Jinxi Green Building Technology Industry Group", alternates: { canonical: "/news/bjgbt/" } };
+export const metadata: Metadata = { title: "Beijing Jinxi Green Building Technology Industry Group", alternates: { canonical: "/news/bjgbt/" }, robots: { index: false, follow: true } };
 const article: NewsArticleData = {
   title: "Beijing Jinxi Green Building Technology", hero: "/figma/news-page/city.webp", heroAlt: "Beijing waterfront skyline",
   summary: "Beijing Jinxi Green Building Technology Industry Group Co., Ltd. is a wholly-owned subsidiary of Jinxi Iron and Steel Group. Established in 1986, Jinxi Group has developed into a large-scale integrated enterprise group with nearly 100 subsidiaries in China and overseas and annual sales revenue exceeding RMB 100 billion.",

@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { BrandedFooter } from "../../components/site";
 import { NewsFeaturedSlider } from "../../components/news-featured-slider";
+import { NewsSeo } from "../../components/news-seo";
 
-export const metadata: Metadata = { title: "Beijing Jinxi Green Building Technology Industry Group", alternates: { canonical: "/news/bjgbt/" } };
+const description = "Discover Beijing Jinxi Green Building Technology Industry Group’s prefabricated steel structures, EPC projects and low-carbon construction capabilities.";
+export const metadata: Metadata = { title: "Beijing Jinxi Green Building Technology Industry Group", description, alternates: { canonical: "/news/bjgbt/" }, openGraph: { type: "article", title: "Beijing Jinxi Green Building Technology Industry Group | OIA Group", description, url: "/news/bjgbt/", images: [{ url: "/figma/news-page/city.webp", alt: "Beijing Jinxi Green Building Technology Industry Group" }] }, twitter: { card: "summary_large_image", title: "Beijing Jinxi Green Building Technology Industry Group | OIA Group", description, images: ["/figma/news-page/city.webp"] } };
 const companyOverview = "Beijing Jinxi Green Building Technology Industry Group Co., Ltd. (Jinxi Green Building) is a wholly-owned subsidiary of Jinxi Iron and Steel Group Co., Ltd. (Hebei Jinxi Iron and Steel Group). Established in 1986, Jinxi Group was reorganized in 2009 with Jinxi Steel Co., Ltd. as its core. It has since developed into a large-scale integrated enterprise group comprising 12 national high-tech enterprises, 3 listed companies, 4 provincial-level specialized and innovative SMEs, and 1 national-level “Little Giant” enterprise, with nearly 100 subsidiaries domestically and abroad, and annual sales revenue exceeding RMB 100 billion.";
 const transformation = [
   "Following national industrial policies, Jinxi Group has deepened supply-side structural reform, continuously optimized its product and industrial structure, and pursued a transformation strategy centered on specialization, extension, and high-end development, charting a unique Jinxi-style path of green, low-carbon, and high-quality growth.",
@@ -14,6 +16,7 @@ const transformation = [
 
 export default function BeijingJinxiGreenBuildingPage() {
   return <article className="green-news-page">
+    <NewsSeo title="Beijing Jinxi Green Building Technology Industry Group" description={description} path="/news/bjgbt/" image="/figma/news-page/city.webp" datePublished="2025-10-11" />
     <section className="green-news-hero"><Image src="/figma/news-page/city.webp" alt="Beijing waterfront business district" fill priority sizes="100vw" /><div className="green-news-hero-shade" /><div className="green-news-hero-copy"><span>News</span><h1>Beijing Jinxi<br />Green Building<br />Technology</h1></div></section>
     <section className="green-news-summary"><p>{companyOverview}</p></section>
     <section className="green-news-business"><h2>Prefabricated Steel Structure<br />Green Building Business</h2><p>The company’s core business includes industrial facilities, urban renewal projects, and EPC general contracting for industrial parks. Through this business model, the company has delivered a wide range of high-quality, fully integrated construction projects both in China and overseas.<br />In China, its prefabricated steel structure solutions have been applied to major projects including the Xiong’an New Area Industrial Park and the redevelopment of Beijing Fengtai Railway Station, Asia’s largest railway hub by floor area.</p><div className="green-news-wide-image"><Image src="/figma/news-green/prefabricated-building.webp" alt="Prefabricated steel structure office building" fill sizes="86vw" /></div></section>

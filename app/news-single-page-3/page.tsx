@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { NewsArticlePage, type NewsArticleData } from "../components/news-article-page";
 
-export const metadata: Metadata = { title: "JinXi DongHuWan Project", alternates: { canonical: "/news/jxdhw/" } };
+export const metadata: Metadata = { title: "JinXi DongHuWan Project", alternates: { canonical: "/news/jxdhw/" }, robots: { index: false, follow: true } };
 const article: NewsArticleData = {
   title: "JinXi DongHuWan Project", hero: "/figma/news-main.webp", heroAlt: "JinXi DongHuWan mixed-use development",
   summary: "JinXi DongHuWan is a landmark mixed-use project shaped around contemporary urban life, combining architectural quality, connected public space and a strong sense of place.",

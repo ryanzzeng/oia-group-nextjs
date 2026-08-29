@@ -2,11 +2,16 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { BrandedFooter } from "../../components/site";
 import { NewsFeaturedSlider } from "../../components/news-featured-slider";
+import { NewsSeo } from "../../components/news-seo";
 
+export const description = "Explore Beijing Jinxi Centennial Architectural Design’s history and expertise in prefabricated steel-structure green buildings.";
 export const metadata: Metadata = {
   title: "Beijing Jinxi Centennial Architectural Design",
-  description: "Beijing Jinxi Centennial Architectural Design and its development history.",
+  description,
   alternates: { canonical: "/news/bjcad/" },
+  robots: { index: false, follow: true },
+  openGraph: { type: "article", title: "Beijing Jinxi Centennial Architectural Design | OIA Group", description, url: "/news/bjcad/", images: [{ url: "/figma/news-single/hero.webp", alt: "Beijing Jinxi Centennial Architectural Design" }] },
+  twitter: { card: "summary_large_image", title: "Beijing Jinxi Centennial Architectural Design | OIA Group", description, images: ["/figma/news-single/hero.webp"] },
 };
 
 const history = [
@@ -20,6 +25,7 @@ const history = [
 
 export default function NewsArticle() {
   return <article className="article-figma single-news">
+    <NewsSeo title="Beijing Jinxi Centennial Architectural Design" description={description} path="/news/bjcad/" image="/figma/news-single/hero.webp" datePublished="2025-10-09" />
     <section className="single-news-hero">
       <Image src="/figma/news-single/hero.webp" alt="Beijing Jinxi office towers" fill priority sizes="100vw" />
       <div className="single-news-overlay" />

@@ -5,14 +5,14 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
-    ["", 1, "monthly"],
-    ["/about-us/", .8, "yearly"],
-    ["/projects/", .9, "monthly"],
-    ["/viewall-projects/", .9, "monthly"],
-    ["/news/", .7, "weekly"],
-    ["/news/bjcad/", .6, "monthly"],
-    ["/news/bjgbt/", .6, "monthly"],
-    ["/news/jxdhw/", .6, "monthly"],
-    ["/news/bjby/", .6, "monthly"],
-  ].map(([path, priority, changeFrequency]) => ({ url: `${baseUrl}${path}`, priority: priority as number, changeFrequency: changeFrequency as "weekly" | "monthly" | "yearly" }));
+    ["", "2026-08-29"],
+    ["/about-us/", "2026-08-29"],
+    ["/projects/", "2026-08-29"],
+    ["/viewall-projects/", "2026-08-29"],
+    ["/news/", "2026-08-29"],
+    ["/news/bjcad/", "2026-08-29"],
+    ["/news/bjgbt/", "2026-08-29"],
+    ["/news/jxdhw/", "2026-08-29"],
+    ["/news/bjby/", "2026-08-29"],
+  ].map(([path, lastModified]) => ({ url: `${baseUrl}${path}`, lastModified }));
 }
