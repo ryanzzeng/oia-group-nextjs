@@ -320,7 +320,7 @@ footer.brand-footer{position:relative;display:block;width:100%;height:420px;min-
 .about-hero h1,.projects-hero h1,.showcase-hero h1,.news-hero h1{font-weight:500}
 
 /* Keep every page-opening hero flush with the bottom of the first viewport. */
-.oia-hero,.about-hero,.projects-hero,.showcase-hero,.news-hero,.article-hero,.single-news-hero,.green-news-hero,.donghu-news-hero,.boyuan-news-hero,.contact-hero{
+.oia-home .oia-hero,.about-hero,.projects-hero,.showcase-hero,.news-hero,.article-hero,.single-news-hero,.green-news-hero,.donghu-news-hero,.boyuan-news-hero,.contact-hero{
   height:100vh;
   height:100svh;
   min-height:100vh;
