@@ -34,6 +34,6 @@ export function BrandedFooter({ className = "brand-footer" }: { className?: stri
       <a href="mailto:info@oiagroup.com.au">EMAIL: info@oiagroup.com.au</a>
       <span>Suite 12.01, Level 12, Tower 1, 495 Victoria<br />Avenue, Chatswood, NSW 2067</span>
     </address>
-    <div className="brand-footer-legal"><Link href="#">Privacy Policy</Link><span>©OIA 2026</span><Link className="brand-footer-mark" href="/" aria-label="OIA Group home"><Image src="/figma/projects-page/raw-12.png" alt="" width={102} height={102} /></Link></div>
+    <div className="brand-footer-legal"><span className="privacy-label">Privacy Policy</span><span>©OIA 2026</span><Link className="brand-footer-mark" href="/" aria-label="OIA Group home"><Image src="/figma/oia-logo.webp" alt="" width={102} height={102} /></Link></div>
   </footer>;
 }

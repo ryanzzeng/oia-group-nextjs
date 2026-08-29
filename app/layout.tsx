@@ -40,7 +40,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           url: "https://oia.group/",
           logo: {
             "@type": "ImageObject",
-            url: "https://oia.group/figma/projects-page/raw-12.png",
+            url: "https://oia.group/figma/oia-logo.webp",
+            width: 256,
+            height: 256,
           },
           email: "info@oiagroup.com.au",
           telephone: "+61 2 9642 7718",
