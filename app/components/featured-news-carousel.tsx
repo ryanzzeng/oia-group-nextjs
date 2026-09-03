@@ -5,8 +5,6 @@ import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { PillLink } from "./site";
 
-const articleHref = "/news/bjcad";
-
 export function FeaturedNewsCarousel() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
@@ -67,36 +65,36 @@ export function FeaturedNewsCarousel() {
             if (event.key === "ArrowLeft") { event.preventDefault(); goTo(Math.max(0, active - 1)); }
           }}
         >
-        <Link className="feature-card feature-card--lead" href={articleHref} style={{ position: "relative" }}>
+        <Link className="feature-card feature-card--lead" href="/news/bjcad/" style={{ position: "relative" }}>
           <Image src="/figma/news-single/hero.webp" alt="Beijing Jinxi glass towers" fill sizes="(max-width: 760px) 84vw, 36vw" priority={false} />
           <span className="feature-card-shade" />
           <span className="feature-card-copy feature-card-copy--top">
-            <time>October 9 2025</time>
+            <time dateTime="2025-10-09">October 9 2025</time>
             <strong>Beijing Jinxi Centennial Architectural Design Co., Ltd</strong>
           </span>
         </Link>
 
         <div className="feature-card-stack">
-          <Link className="feature-card" href={articleHref} style={{ position: "relative" }}>
+          <Link className="feature-card" href="/news/jxdhw/" style={{ position: "relative" }}>
             <Image src="/figma/news-main.webp" alt="JinXi DongHuWan commercial building" fill sizes="(max-width: 760px) 84vw, 29vw" />
             <span className="feature-card-shade" />
             <span className="feature-card-copy">
               <strong>JinXi DongHuWan<br />Project</strong>
-              <time>October 9 2025</time>
+              <time dateTime="2025-10-09">October 9 2025</time>
             </span>
           </Link>
-          <Link className="feature-card" href={articleHref} style={{ position: "relative" }}>
+          <Link className="feature-card" href="/news/bjgbt/" style={{ position: "relative" }}>
             <Image src="/figma/news-page/city.webp" alt="Beijing waterfront skyline" fill sizes="(max-width: 760px) 84vw, 29vw" />
             <span className="feature-card-shade" />
             <span className="feature-card-copy">
               <strong>Beijing Jinxi Green Building<br />Technology Industry Group<br />Co., Ltd</strong>
-              <time>October 11 2025</time>
+              <time dateTime="2025-10-11">October 11 2025</time>
             </span>
           </Link>
         </div>
 
         <article className="feature-card feature-card--end" style={{ position: "relative" }}>
-          <Link className="feature-card-link" href={articleHref} aria-label="Read OIA China Oriental Group news" />
+          <Link className="feature-card-link" href="/news/bjcad/" aria-label="Read OIA China Oriental Group news" />
           <Image src="/figma/news-page/oia-oriental-tower.webp" alt="OIA China Oriental Group office tower" fill sizes="(max-width: 760px) 84vw, 32vw" />
           <span className="feature-card-shade" />
           <span className="feature-card-copy feature-card-copy--top">
