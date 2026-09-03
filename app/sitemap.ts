@@ -14,5 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/news/bjgbt/", "2026-08-29"],
     ["/news/jxdhw/", "2026-08-29"],
     ["/news/bjby/", "2026-08-29"],
+    ["/privacy-policy/", "2026-09-03"],
   ].map(([path, lastModified]) => ({ url: `${baseUrl}${path}`, lastModified }));
 }
