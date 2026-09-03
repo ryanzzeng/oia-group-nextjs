@@ -396,13 +396,14 @@ footer.brand-footer{width:100%;height:456px;min-height:456px;margin:22px 0 0;bac
 /* Privacy policy — Figma node 44:3. */
 body:has(.privacy-page) .site-header{position:absolute;inset:0 0 auto;color:#fff;border-color:transparent;z-index:10}
 .privacy-page{background:#fff;color:#111;font-family:Inter,Arial,sans-serif;overflow:hidden}
-.privacy-hero{position:relative;height:min(65.1vw,1252px);min-height:650px;color:#fff;overflow:hidden}
-.privacy-hero>img{object-fit:cover;object-position:center 40%}
+.privacy-hero{position:relative;height:54.5vw;min-height:620px;color:#fff;overflow:hidden}
+.privacy-hero>img{object-fit:cover;object-position:center center}
 .privacy-hero-shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(9,27,54,.28),rgba(9,27,54,.04))}
-.privacy-hero h1{position:absolute;left:9.1%;bottom:31.5%;margin:0;text-transform:uppercase;font-size:clamp(58px,4.7vw,90px);font-weight:600;line-height:.94;letter-spacing:-.035em}
+.privacy-hero h1{position:absolute;left:8.2%;bottom:22%;margin:0;text-transform:uppercase;font-size:clamp(58px,4.25vw,82px);font-weight:500;line-height:1.05;letter-spacing:-.035em}
 .privacy-content{width:min(75.1%,1444px);margin:0 auto;padding:clamp(120px,8vw,154px) 0 clamp(125px,9vw,175px);font-size:clamp(17px,1.1vw,21px);line-height:1.343;letter-spacing:-.01em}
 .privacy-content section{margin-bottom:28px}.privacy-content section:last-child{margin-bottom:0}
 .privacy-content h2,.privacy-content h3{font:inherit;font-weight:500;margin:0 0 4px}.privacy-content h3{margin-top:22px}
 .privacy-content p{margin:0 0 8px}.privacy-content ul{margin:0 0 8px;padding-left:1.5em}.privacy-content li{padding-left:.25em;margin-bottom:2px}
 .privacy-content a{text-decoration:underline;text-underline-offset:3px}.privacy-page>.brand-footer{margin:0}
-@media(max-width:760px){.privacy-hero{height:72vh;min-height:560px}.privacy-hero>img{object-position:45% center}.privacy-hero h1{left:7%;right:7%;bottom:16%;font-size:clamp(46px,12vw,66px)}.privacy-content{width:86%;padding:90px 0 110px;font-size:16px;line-height:1.55;letter-spacing:0}.privacy-content section{margin-bottom:42px}.privacy-content h2{font-size:19px;line-height:1.35;margin-bottom:12px}.privacy-content h3{font-size:16px;font-weight:600;margin-top:24px}.privacy-content p{margin-bottom:13px}.privacy-content li{margin-bottom:6px}}
+@media(min-width:761px){body:has(.privacy-page) .site-header{height:182px;padding:0 6.25%}}
+@media(max-width:760px){body:has(.privacy-page) .site-header{height:88px;padding:0 5.5%}.privacy-hero{height:78svh;min-height:560px;max-height:760px}.privacy-hero>img{object-position:56% center}.privacy-hero-shade{background:linear-gradient(0deg,rgba(8,21,38,.42),rgba(8,21,38,.03) 58%)}.privacy-hero h1{left:6%;right:6%;bottom:10%;font-size:clamp(43px,12.2vw,58px);line-height:1.02;letter-spacing:-.04em}.privacy-content{width:86%;padding:90px 0 110px;font-size:16px;line-height:1.55;letter-spacing:0}.privacy-content section{margin-bottom:42px}.privacy-content h2{font-size:19px;line-height:1.35;margin-bottom:12px}.privacy-content h3{font-size:16px;font-weight:600;margin-top:24px}.privacy-content p{margin-bottom:13px}.privacy-content li{margin-bottom:6px}}
