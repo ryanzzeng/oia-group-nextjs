@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description,
   alternates: { canonical: "/privacy-policy/" },
-  openGraph: { type: "website", title: "Privacy Policy | OIA Group", description, url: "/privacy-policy/", images: [{ url: "/figma/privacy/hero.png", alt: "Curved contemporary building facade" }] },
+  openGraph: { type: "website", title: "Privacy Policy | OIA Group", description, url: "/privacy-policy/", images: [{ url: "/figma/privacy/hero.webp", alt: "Curved contemporary building facade" }] },
 };
 
 const BulletList = ({ children }: { children: React.ReactNode }) => <ul>{children}</ul>;
@@ -16,7 +16,7 @@ const BulletList = ({ children }: { children: React.ReactNode }) => <ul>{childre
 export default function PrivacyPolicy() {
   return <div className="privacy-page">
     <PageSeo name="Privacy Policy" description={description} path="/privacy-policy/" breadcrumbs={[{ name: "Home", path: "/" }, { name: "Privacy Policy", path: "/privacy-policy/" }]} />
-    <ImageHero className="privacy-hero" image="/figma/privacy/hero.png" alt="Curved contemporary building facade" title="Privacy Policy" />
+    <ImageHero className="privacy-hero" image="/figma/privacy/hero.webp" alt="Curved contemporary building facade" title="Privacy Policy" />
 
     <article className="privacy-content">
       <section><h2>1. Overview</h2><p>Oriental Investment Australia Group Pty Ltd and its related entities (OIA Group, we, us or our) are committed to protecting your privacy and handling your personal information in accordance with the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs).</p><p>This Privacy Policy explains how we collect, use, disclose and manage personal information in connection with our business, including property development, sales, leasing and investment activities, and through our website.</p></section>
