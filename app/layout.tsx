@@ -15,9 +15,9 @@ export const metadata: Metadata = {
     title: "OIA Group — Premium Residential Developments",
     description: "Thoughtfully designed residential developments created for modern Australian living.",
     url: "/",
-    images: [{ url: "/figma/viewall-projects/hero.webp", width: 3500, height: 2060, alt: "OIA Group residential development" }],
+    images: [{ url: "/figma/og-image.webp", width: 1200, height: 630, alt: "OIA Group residential development" }],
   },
-  twitter: { card: "summary_large_image", title: "OIA Group", description: "Premium residential developments created for modern Australian living.", images: ["/figma/viewall-projects/hero.webp"] },
+  twitter: { card: "summary_large_image", title: "OIA Group", description: "Premium residential developments created for modern Australian living.", images: ["/figma/og-image.webp"] },
 };
 
 export const viewport: Viewport = {

@@ -16,14 +16,14 @@ export const metadata: Metadata = {
     title: "OIA Group | Sydney Residential Property Developer",
     description: "Discover OIA Group's premium residential and mixed-use property developments across Sydney and Australia.",
     url: "/",
-    images: [{ url: "/figma/viewall-projects/hero.webp", width: 3500, height: 2060, alt: "OIA Group residential development" }],
+    images: [{ url: "/figma/og-image.webp", width: 1200, height: 630, alt: "OIA Group residential development" }],
   },
-  twitter: { card: "summary_large_image", title: "OIA Group | Sydney Residential Property Developer", description: "Discover OIA Group's premium residential and mixed-use property developments across Sydney and Australia.", images: ["/figma/viewall-projects/hero.webp"] },
+  twitter: { card: "summary_large_image", title: "OIA Group | Sydney Residential Property Developer", description: "Discover OIA Group's premium residential and mixed-use property developments across Sydney and Australia.", images: ["/figma/og-image.webp"] },
 };
 
 export default function Home() {
   return <div className="oia-home">
-    <ImageHero className="oia-hero" image="/figma/hero.webp" alt="OIA residential development on a landscaped city street" eyebrow="Sydney residential property developer" title={<>Your home,<br />our priority</>} />
+    <ImageHero className="oia-hero" image="/figma/hero-png.webp" alt="OIA residential development on a landscaped city street" eyebrow="" title={<>Your home,<br />our priority</>} />
 
     <HomeIntroSlider />
 

@@ -6,10 +6,10 @@ import { useState } from "react";
 import { BrandedFooter, ImageHero, PillLink } from "./site";
 
 const stories = [
-  { title: "Beijing Jinxi Centennial Architectural Design", date: "2025-10-09", label: "Published October 9th 2025", image: "/figma/news-single/tower.webp", alt: "Beijing Jinxi tower", href: "/news/bjcad" },
-  { title: "Beijing Jinxi Green Building Technology Industry Group", date: "2025-10-11", label: "Published October 11th 2025", image: "/figma/news-page/city.webp", alt: "Waterfront skyline at dusk", href: "/news/bjgbt" },
-  { title: "JinXi DongHuWan Project", date: "2025-10-09", label: "Published October 9th 2025", image: "/figma/news-main.webp", alt: "JinXi DongHuWan commercial building", href: "/news/jxdhw" },
-  { title: "Beijing Jinxi Boyuan Real Estate Co, Ltd", date: "2025-10-09", label: "Published October 9th 2025", image: "/figma/news-single/architecture.webp", alt: "Contemporary high-rise architecture", href: "/news/bjby" },
+  { title: "Beijing Jinxi Centennial Architectural Design", date: "2025-10-09", label: "Published October 9th 2025", image: "/figma/news-single/tower.webp", alt: "Beijing Jinxi tower", href: "/news/bjcad/" },
+  { title: "Beijing Jinxi Green Building Technology Industry Group", date: "2025-10-11", label: "Published October 11th 2025", image: "/figma/news-page/city.webp", alt: "Waterfront skyline at dusk", href: "/news/bjgbt/" },
+  { title: "JinXi DongHuWan Project", date: "2025-10-09", label: "Published October 9th 2025", image: "/figma/news-main.webp", alt: "JinXi DongHuWan commercial building", href: "/news/jxdhw/" },
+  { title: "Beijing Jinxi Boyuan Real Estate Co, Ltd", date: "2025-10-09", label: "Published October 9th 2025", image: "/figma/news-single/architecture.webp", alt: "Contemporary high-rise architecture", href: "/news/bjby/" },
 ];
 
 export function NewsPageContent() {
@@ -29,7 +29,7 @@ export function NewsPageContent() {
     </section>}
 
     <div className={`figma-news-content${expanded ? " is-expanded" : ""}`} id="news-list">
-      {stories.slice(0, expanded ? 4 : 2).map((story, index) => <article className={`figma-news-story ${index === 0 ? "figma-news-story-first" : "figma-news-story-featured"}`} key={story.title}>
+      {stories.map((story, index) => <article className={`figma-news-story ${index === 0 ? "figma-news-story-first" : "figma-news-story-featured"}${!expanded && index >= 2 ? " is-collapsed-story" : ""}`} key={story.title}>
         <Link className="card-hit-area" href={story.href} aria-label={`Read ${story.title}`} />
         <div className="figma-news-copy">
           <span>News</span>
@@ -44,7 +44,7 @@ export function NewsPageContent() {
       </article>)}
 
       {!expanded && <div className="figma-news-all">
-        <button className="oia-button figma-news-expand" type="button" onClick={showAll} aria-controls="news-list" aria-expanded="false">
+        <button className="oia-button figma-news-expand" type="button" onClick={showAll} aria-controls="news-list" aria-expanded={expanded}>
           <span>View all news</span>
           <b aria-hidden="true"><Image src="/figma/ui/arrow.svg" alt="" width={15} height={18} /></b>
         </button>
