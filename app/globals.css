@@ -16,6 +16,11 @@ body:has(.about-figma) .site-header{position:absolute;inset:0 0 auto;color:#fff;
 
 /* Keep the About values artwork full-bleed across each panel. */
 .about-value-shades i{border:0}
+@media(max-width:760px){
+  .about-values-mobile-images img{width:307%!important}
+  .about-values-mobile-images>div:nth-child(2) img{left:-103.5%!important}
+  .about-values-mobile-images>div:nth-child(3) img{left:-207%!important}
+}
 
 /* Figma Projects */
 body:has(.projects-figma) .site-header{position:absolute;inset:0 0 auto;color:#fff;border-color:transparent;z-index:10}
